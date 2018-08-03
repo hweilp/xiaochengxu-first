@@ -1,17 +1,8 @@
-.list_group{
-  padding: 10px 20px;
-}
-.navigator-hover{
-  display: inline-block;
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007AFF;
-}
+/* pages/components/viewPage/viewPage.wxss */
 .list{
   width: 100%;
   box-sizing: border-box;
-  padding:0 20px; 
+  padding:20px 20px; 
 }
 .list-item-text{
   width: 100%;

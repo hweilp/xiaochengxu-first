@@ -1,0 +1,10 @@
+<!--components/link/link.wxml-->
+<view class='link-view'>
+  <navigator 
+  class='navigator {{className}}'
+  hover-class="navigator-hover"
+  url="{{href}}">
+    <text>{{title}}</text>  
+    <image src='{{imageUrl}}'></image>
+  </navigator>
+</view>

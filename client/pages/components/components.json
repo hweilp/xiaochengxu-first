@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "link": "/components/link/link"
+  },
+  "navigationBarTitleText": "组件"
+}

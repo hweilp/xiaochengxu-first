@@ -1,13 +1,14 @@
 {
-  "pages":[
-    "pages/index/index",
+  "pages": [
     "pages/components/components",
+    "pages/index/index",
     "pages/addCgi/addCgi",
-    "pages/api/api"
+    "pages/api/api",
+    "pages/components/viewPage/viewPage"
   ],
   "tabBar": {
     "selectedColor": "#007AFF",
-    "list":[
+    "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
@@ -28,11 +29,11 @@
       }
     ]
   },
-  "window":{
-    "backgroundColor":"#F6F6F6",
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

@@ -1,0 +1,23 @@
+/* components/link/link.wxss */
+.link-view{
+  width: 100%;
+}
+.link-view image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.link-view text{
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.navigator{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+  padding: 10rpx;
+  border-radius: 3rpx;
+}
+.navigator-hover{
+  color:#007AFF;
+  /* background: #b3d8ff; */
+}

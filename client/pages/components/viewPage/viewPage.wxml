@@ -1,0 +1,35 @@
+<!--pages/components/viewPage/viewPage.wxml-->
+<view class='list'>
+  <view style='margin-bottom:10px;'>
+    <text>{{title}}</text>
+  </view>
+  <view 
+    class="list-content" 
+    wx:for="{{list}}"
+    wx:for-item="item"
+    wx:key="{{index}}">
+    <view class='contents'>
+      <view class='title-text'>
+        <text>{{item.name}} => {{item.nameStr}}</text>
+      </view>
+      <view class='attr-content'>
+        <view class='attr-list'>
+          <text>属性名</text>
+          <text>类型</text>
+          <text>默认值</text>
+          <text>说明</text>
+        </view>
+        <view 
+        class='attr-list'
+        wx:for="{{item.attr}}"
+        wx:for-item="items"
+        wx:key="{{index}}">
+          <text>{{items.name}}</text>
+          <text>{{items.type}}</text>
+          <text>{{items.default}}</text>
+          <text>{{items.explain}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
