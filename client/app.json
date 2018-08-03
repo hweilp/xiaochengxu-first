@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/components/components",
     "pages/index/index",
+    "pages/components/components",
     "pages/addCgi/addCgi",
     "pages/api/api"
   ],
