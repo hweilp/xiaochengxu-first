@@ -1,0 +1,40 @@
+<view class="container">
+  <view class='list_group'>
+    <text class="list_text">{{name}}</text>
+  </view>
+  <view class='list' style='width:100%;font-size:17rpx;'>
+    <text>官网地址：https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html</text>
+  </view>
+  <view class='list'>
+    <text class='list-item-text'>视图容器</text>
+    <view 
+      class="list-content" 
+      wx:for="{{list}}"
+      wx:for-item="item"
+      wx:key="{{index}}">
+      <view class='contents'>
+        <view class='title-text'>
+          <text>{{item.name}} => {{item.nameStr}}</text>
+        </view>
+        <view class='attr-content'>
+          <view class='attr-list'>
+            <text>属性名</text>
+            <text>类型</text>
+            <text>默认值</text>
+            <!-- <text>说明</text> -->
+          </view>
+          <view 
+          class='attr-list'
+          wx:for="{{item.attr}}"
+          wx:for-item="items"
+          wx:key="{{index}}">
+            <text>{{items.name}}</text>
+            <text>{{items.type}}</text>
+            <text>{{items.default}}</text>
+            <!-- <text>{{items.explain}}</text> -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

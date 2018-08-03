@@ -1,0 +1,7 @@
+<!--pages/api.wxml-->
+<view class="container">
+  <view class='list_group'>
+    <text class="list_text">{{name}}</text>
+    <text class="list_text">{{userInfo.nickName}}</text>
+  </view>
+</view>

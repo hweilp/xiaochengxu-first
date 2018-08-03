@@ -1,0 +1,68 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="swiper" 
+    indicator-dots="{{indicatorDots}}" 
+    indicator-color="{{indicatorColor}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index"  wx:for-item="items">
+      <swiper-item>
+        <image  mode="aspectFill" src="{{items}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="list_group">
+    <text class="list_text">欢迎使用微信小程序</text>
+  </view>
+
+  <!-- 用户登录测试 -->
+  <view class="userinfo list_group">
+      <image
+        class="userinfo-avatar"
+        src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+        background-size="cover">
+      </image>
+      <view wx:if="{{!logged}}" class="user-name">
+        <button 
+            class="userinfo-nickname" 
+            open-type="getUserInfo" 
+            bindgetuserinfo="bindGetUserInfo">
+              点击测试登录接口
+        </button>
+      </view>
+      <view wx:if="{{logged}}">
+        <view><text class="userinfo-nickname">{{userInfo.nickName}} 欢迎登录</text></view>
+        <view><text class="userinfo-nickname">性别: {{userInfo.gender == 1 ? "男":"女"}}</text></view>
+        <view><text class="userinfo-nickname">城市:{{userInfo.city}}</text></view>
+      </view>
+  </view>
+  <!-- 选取图片 -->
+  <view class="list_group" bindtap="chooseImage">
+    <text class="list_text">选取图片</text>
+  </view>
+  <view wx:if="imgs.length > 0">
+    <view 
+      class="img-item" 
+      wx:for="{{imgs}}" 
+      wx:key="{{index}}"  
+      data-index="{{index}}"
+      data-imgurl="{{item}}"
+      wx:for-item="item"
+      bindtap="imgClick"
+      bindlongpress="oprImg"
+      >
+      <!-- <view class='clear-block' bindtap='deleteImg'>
+        <icon class='icon' type="clear" size="20" color="white"/>
+      </view> -->
+      <image src="{{item}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <!-- 获取地址 -->
+  <view class="list_group">
+    <text class="list_text">地图</text>
+  </view>
+  <view class="myMap list_group" bindtap="getCenterLocation">
+    <map id="myMap" show-location />
+  </view>
+</view>

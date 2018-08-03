@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/components/components",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/api/api"
+  ],
+  "tabBar": {
+    "selectedColor": "#007AFF",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "vendor/images/tabbarIcon/index.png",
+        "selectedIconPath": "vendor/images/tabbarIcon/index_s.png"
+      },
+      {
+        "pagePath": "pages/components/components",
+        "text": "组件",
+        "iconPath": "vendor/images/tabbarIcon/compon.png",
+        "selectedIconPath": "vendor/images/tabbarIcon/compon_s.png"
+      },
+      {
+        "pagePath": "pages/api/api",
+        "text": "api",
+        "iconPath": "vendor/images/tabbarIcon/api.png",
+        "selectedIconPath": "vendor/images/tabbarIcon/api_s.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundColor":"#F6F6F6",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,23 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+.list_group{
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, .1); 
+  border-bottom: 1px solid rgba(0, 0, 0, .1); 
+  padding-left: 20px; 
+  background: white;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.list_text{
+  width: 100%;
+  line-height: 52px;
+  font-size: 34rpx;
+  color: #007AFF;
+}
