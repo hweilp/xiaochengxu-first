@@ -5,7 +5,7 @@
   <view class='list' style='width:100%;font-size:20rpx;margin-bottom:20px;'>
     <text>官网地址：https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html</text>
   </view>
-   <view class='list_group'>
+  <view class='list_group'>
     <link 
     title="视图容器"
     className='hover'
@@ -13,4 +13,53 @@
     href="/pages/components/viewPage/viewPage?id=0">
     </link>
   </view>
+  <view class='list_group'>
+    <link 
+    title="基础内容"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=1">
+    </link>
+  </view>
+  <view class='list_group'>
+    <link 
+    title="表单组件"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=2">
+    </link>
+  </view>
+   <view class='list_group'>
+    <link 
+    title="导航"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=3">
+    </link>
+  </view>
+   <view class='list_group'>
+    <link 
+    title="媒体组件"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=4">
+    </link>
+  </view>
+   <view class='list_group'>
+    <link 
+    title="地图"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=5">
+    </link>
+  </view>
+   <view class='list_group'>
+    <link 
+    title="画布"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/components/viewPage/viewPage?id=6">
+    </link>
+  </view>
+  
 </view>
