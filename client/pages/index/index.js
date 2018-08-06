@@ -28,17 +28,35 @@ Page({
   onLoad: function () {
     // 用户首次打开小程序，触发 onLaunch（全局只触发一次）。
     var that = this
-    util.showModel('是否授权获取微信信息', '', true, function (val) {
-      if (val.cancel) return;
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            userInfo: res.userInfo,
-            logged: true
+  },
+  bindGetUserInfo () {
+    var that = this
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已授权
+          that.getUserInfo()
+        } else {
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success() {
+              that.getUserInfo()
+            }
           })
-          Storage.setStorage('userInfo', res.userInfo)
         }
-      })
+      }
+    })
+  },
+  getUserInfo() {
+    var that = this
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          userInfo: res.userInfo,
+          logged: true
+        })
+        Storage.setStorage('userInfo', res.userInfo)
+      }
     })
   },
   onReady (e) {

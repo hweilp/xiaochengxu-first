@@ -5,6 +5,17 @@
   <view class='list' style='width:100%;font-size:20rpx;margin-bottom:20px;'>
     <text>官网地址：https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html</text>
   </view>
+   <movable-area style="display:flex;just-content:space-between;height: 100rpx; width: 100%; border:1px solid #d2d2d2; margin:10rpx 0;">
+    <movable-view damping='{{80}}' style="z-index:9;right:0;height: 100%; width: 80%; background: #f0f0f0;" x="{{x}}" y="{{y}}" direction="all" inertia="{{true}}" bindchange='movableChange'>
+    <view style='width:125%;height: 100%;background:white;position:absolute;left:-25%;'>
+      <text style='line-height:100rpx;'>左滑操作</text>
+    </view>
+    </movable-view>
+    <view style='z-index:8;position:absolute;right:0;height:100%;width:20%;text-align:center;background:red;' catchtap='deleteItem'>
+      <text style='line-height:100rpx;color:white;'>删除</text>
+    </view>
+  </movable-area>
+
   <view class='list_group'>
     <link 
     title="视图容器"
