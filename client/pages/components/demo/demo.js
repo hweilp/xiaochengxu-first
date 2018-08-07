@@ -282,17 +282,6 @@ Page({
       })
     }
   },
-  takePhoto() {
-    const ctx = wx.createCameraContext()
-    ctx.takePhoto({
-      quality: 'high',
-      success: (res) => {
-        this.setData({
-          imgSrc: res.tempImagePath
-        })
-      }
-    })
-  },
   regionchange(e) {
     console.log(e.type)
   },

@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    imgSrc: ''
   },
 
   /**
@@ -19,5 +19,16 @@ Component({
    */
   methods: {
 
+    takePhoto() {
+      const ctx = wx.createCameraContext()
+      ctx.takePhoto({
+        quality: 'high',
+        success: (res) => {
+          this.setData({
+            imgSrc: res.tempImagePath
+          })
+        }
+      })
+    },
   }
 })
