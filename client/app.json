@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/components/demo/demo",
     "pages/index/index",
     "pages/components/components",
     "pages/addCgi/addCgi",

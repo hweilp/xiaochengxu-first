@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "示例",
+  "usingComponents": {
+    "cameras": "/components/camera/camera"
+  }
+}

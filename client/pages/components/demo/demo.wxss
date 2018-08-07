@@ -1,0 +1,19 @@
+/* pages/components/demo/demo.wxss */
+button{
+  margin-bottom: 10rpx;
+}
+input,textarea{
+  border: 1px solid #d2d2d2;
+  padding: 5px;
+  border-radius: 4px;
+}
+textarea{
+  height: 40px;
+}
+
+.section{
+  margin:10px 0 0;
+}
+.picker{
+  font-size: 14px;
+}

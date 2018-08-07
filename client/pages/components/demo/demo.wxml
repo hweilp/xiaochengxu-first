@@ -1,0 +1,272 @@
+<!--pages/components/demo/demo.wxml-->
+<view class="container">
+  <view class='list_group'>
+    <text class="list_text">视图容器</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>view -> 视图容器。</text>
+      <view style='width:60%;height:50px;background:#d3dce6;'></view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>scroll-view -> 可滚动视图区域</text>
+      <scroll-view style='width:60%;height:100px;background:#d3dce6;' scroll-y='{{true}}'>
+        <view><text>item-1</text></view>
+        <view><text>item-2</text></view>
+        <view><text>item-3</text></view>
+        <view><text>item-4</text></view>
+        <view><text>item-5</text></view>
+      </scroll-view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>swiper -> 滑块视图容器</text>
+      <swiper class="swiper" 
+        indicator-dots="{{indicatorDots}}" 
+        indicator-color="{{indicatorColor}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="index"  wx:for-item="items">
+          <swiper-item>
+            <image  mode="aspectFill" src="{{items}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+     <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>movable-view -> 可移动的视图容器</text>
+        <movable-area style="height: 200px; width: 200px; background: red;">
+          <movable-view style="height: 50px; width: 50px; background: blue;" 
+            x="{{x}}" y="{{y}}" direction="all">
+          </movable-view>
+        </movable-area>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>movable-area -> 覆盖视图</text>
+      <cover-view class="pause" bindtap="pause">
+        <cover-image class="img" src="/vendor/images/img/erha.jpeg" />
+      </cover-view>
+    </view>
+
+  </view>
+
+  <view class='list_group'>
+    <text class='list_text'>基础内容</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;border:1px solid #d2d2d2;'>
+      <text>icon -> 图标</text>
+      <icon type="success" size="40"/>
+    </view>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>text -> 文本</text>
+      <text>文本信息</text>
+    </view>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;border:1px solid #d2d2d2;'>
+      <text>rich-text -> 富文本</text>
+      <view>
+        <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+      </view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;border:1px solid #d2d2d2;'>
+      <text>progress -> 进度条。</text>
+      <view>
+        <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='list_group'>
+    <text class='list_text'>表单组件</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>button -> 按钮</text>
+      <button data-text='default' type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="btnClick" hover-class="other-button-hover"> default         </button>
+        <button data-text='primary' type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="btnClick" hover-class="other-button-hover"> primary         </button>
+         <button data-text='warn' type="warn" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="btnClick" hover-class="other-button-hover"> warn         </button>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>checkbox-group -> 多项选择器</text>
+      <view>
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{items}}" wx:key="index">
+            <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>input -> 输入框</text>
+      <view style='margin:10px 0 0;'>
+        <input placeholder="这是一个可以自动聚焦的input" focus="{{true}}"/>
+      </view>
+
+      <view style='margin:10px 0 0;'>
+        <input  maxlength="10" placeholder="最大输入长度10" />
+      </view>
+
+      <view class="section">
+        <input password type="number" />
+      </view>
+      <view class="section">
+        <input password type="text" />
+      </view>
+      <view class="section">
+        <input type="digit" placeholder="带小数点的数字键盘"/>
+      </view>
+      <view class="section">
+        <input type="idcard" placeholder="身份证输入键盘" />
+      </view>
+      <view class="section">
+        <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
+      </view>
+
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>textarea -> 多行输入框</text>
+      <view class="section">
+        <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+      </view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>picker -> 从底部弹起的滚动选择器</text>
+      <view>
+        <text style='font-size:14px;'>普通选择器：mode = selector</text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            当前选择：{{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view>
+        <text style='font-size:14px;'>时间选择器：mode = time</text>
+        <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="picker">
+            当前选择: {{time}}
+          </view>
+        </picker>
+      </view>
+      <view>
+        <text style='font-size:14px;'>日期选择器：mode = date</text>
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="picker">
+            当前选择: {{date}}
+          </view>
+        </picker>
+      </view>
+      <view>
+        <text style='font-size:14px;'>省市区选择器：mode = region</text>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+            当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>radio -> 单项选择器</text>
+      <view>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}" wx:key='index'>
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+     <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>slider -> 滑动选择器</text>
+      <view class="section section_gap">
+        <text class="section__title">设置最小/最大值</text>
+        <view class="body-view">
+          <slider bindchange="slider4change" min="50" max="200" show-value/>
+        </view>
+      </view>
+    </view>
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>switch -> 开关选择器</text>
+      <view class="body-view">
+        <switch checked bindchange="switch1Change"/>
+      </view>
+    </view>
+    
+
+  </view>
+
+  <view class='list_group'>
+    <text class='list_text'>媒体组件</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>audio -> 音频</text>
+      <view>
+        <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+        <button style='margin-top:10px;' type="primary" bindtap="audioPlay">播放</button>
+        <button type="primary" bindtap="audioPause">暂停</button>
+        <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+        <button type="primary" bindtap="audioStart">回到开头</button>
+      </view>
+    </view>  
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>audio -> 视频</text>
+      <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+      <view class="btn-area">
+        <button bindtap="bindButtonTap">获取视频</button>
+        <input bindblur="bindInputBlur" style='margin:10px 0;' placeholder='弹幕内容'/>
+        <button bindtap="bindSendDanmu">发送弹幕</button>
+      </view>
+    </view>  
+
+
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>camera -> 系统相机</text>
+      <view>
+        <button bindtap="bindButOpenCamera">{{cameraBtnTitle}}</button>
+        <view wx:if='{{openCameraFlag}}'>
+          <cameras></cameras>  
+        </view>
+      </view>
+    </view>  
+
+  </view>
+
+  <view class='list_group'>
+    <text class='list_text'>地图</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>map -> 地图</text>
+      <map 
+      id="map" 
+      longitude="{{longitude}}" 
+      latitude="{{latitude}}" 
+      scale="14"
+      markers="{{markers}}"
+      show-location style="width: 100%; height: 300px;"></map>
+    </view>
+  </view>  
+
+
+  <view class='list_group'>
+    <text class='list_text'>画布</text>
+    <view style='padding:10px;border:1px solid #d2d2d2;margin-bottom:10px;'>
+      <text>canvas -> 画布</text>
+      <view>
+        <!-- canvas.wxml -->
+          <canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+          <!-- 当使用绝对定位时，文档流后边的 canvas 的显示层级高于前边的 canvas -->
+
+      </view>
+    </view>
+  </view>  
+
+</view>  

@@ -16,5 +16,10 @@ Page({
   },
   deleteItem () {
     util.showSuccess('删除成功')
+  },
+  gotodemo () {
+    wx.navigateTo({
+      url: '/pages/components/demo/demo'
+    })
   }
 })
