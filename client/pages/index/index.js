@@ -109,27 +109,40 @@ Page({
             that.setData({
               imgs: that.data.imgs
             })
+            util.showSuccess('删除成功')
           case 1 :
-            wx.downloadFile({
-              url: imgSrc,
-              success (res) {
-                wx.saveImageToPhotosAlbum({
-                  filePath: imgSrc,
-                  success: (res) => {
-                    util.showSuccess('保存成功')
-                  },
-                  fail: (err) => {
-                    util.showFail('保存失败')
-                  }
-                })
-                
+            wx.getSetting({
+              success: function (res) {
+                if (res.authSetting['scope.writePhotosAlbum']) {
+                  // 已授权
+                  that.saveImageToPhotosAlbum(imgSrc)
+                } else {
+                  console.log(2)
+                  wx.authorize({
+                    scope: 'scope.writePhotosAlbum',
+                    success() {
+                      that.saveImageToPhotosAlbum(imgSrc)
+                    }
+                  })
+                }
               }
-            }) 
+            })
           default :
             break
         }
       },
       fail (res) {
+      }
+    })
+  },
+  saveImageToPhotosAlbum(imgSrc) {
+    wx.saveImageToPhotosAlbum({
+      filePath: imgSrc,
+      success: (res) => {
+        util.showSuccess('保存成功')
+      },
+      fail: (err) => {
+        util.showFail('保存失败')
       }
     })
   },
@@ -157,6 +170,7 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     })
-
+  },
+  getCenterLocation(){
   }
 })
