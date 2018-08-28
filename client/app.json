@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/components/demo/demo",
     "pages/index/index",
     "pages/components/components",
-    "pages/addCgi/addCgi",
     "pages/api/api",
-    "pages/components/viewPage/viewPage"
+    "pages/components/viewPage/viewPage",
+    "pages/components/demo/demo",
+    "pages/api/apilist/list"
   ],
   "tabBar": {
     "selectedColor": "#007AFF",

@@ -1,0 +1,29 @@
+/* pages/api/apilist/list.wxss */
+.container{
+   padding: 20px;
+   box-sizing: border-box;
+}
+.info{
+  width: 100%;
+  border: 1px solid #b2b2b2;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.info-list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b2b2b2;
+  margin-bottom: 10px;
+}
+.info-list:last-child{
+  border-bottom:none;
+  margin-bottom: 0;
+}
+.info-list text{
+  flex: 1;
+  font-size: 14px;
+}
+.info-list text:nth-child(2){
+  text-align: right;
+}

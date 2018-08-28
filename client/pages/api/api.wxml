@@ -3,4 +3,19 @@
   <view class='list_group'>
     <text class="list_text">{{name}}</text>
   </view>
+  <view class='list_group'>
+    <button catchtap='openScanCode'>扫码</button>
+  </view>
+  <view class='list_group'>
+    <view class='record'><text>录音</text></view>
+    <soundRecord></soundRecord>
+  </view>
+  <view class='list_group'>
+    <link 
+    title="系统信息"
+    className='hover'
+    hoverClass='hover-a'
+    href="/pages/api/apilist/list?id=1">
+    </link>
+  </view>
 </view>

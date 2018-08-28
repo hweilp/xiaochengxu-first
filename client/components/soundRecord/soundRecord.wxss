@@ -1,0 +1,67 @@
+/* components/soundRecord/soundRecord.wxss */
+.container{
+}
+.record{
+  border: 1px solid #d2d2d2;
+  padding: 10px;
+  border-radius: 4px;
+  background: #d2d2d2;
+}
+.title{
+  padding: 10pt;
+  text-align: center;
+}
+.time{
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.icon{
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.icon image{
+  width: 50px;
+  height: 50px;
+}
+.opr{
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+.opr button{
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.lists{
+  padding: 3pt 5pt;
+  box-sizing: border-box;
+  margin: 0 0 8pt 0;
+  background: #2C91E5;
+}
+.lists text{
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
+}
+.lists:nth-child(2n){
+  background: #4AA454;
+}
+.lists:last-child{
+  margin: 0;
+}
+
+
+.fade{
+  position: fixed;
+  background: wheat;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}

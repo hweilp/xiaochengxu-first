@@ -1,0 +1,32 @@
+<!--pages/api/apilist/list.wxml-->
+<view class='container'>
+  <web-view src="{{webUrl}}" wx:if='{{id === "2"}}'></web-view>
+  <view class='info' wx:if='{{id === "1"}}'>
+    <view wx:if='{{id === "1"}}'>
+      <view class='info-list'>
+        <text>手机品牌</text>
+        <text>{{systemInfo.brand}}</text>
+      </view>
+      <view class='info-list'>
+        <text>手机型号</text>
+        <text>{{systemInfo.model}}</text>
+      </view>
+      <view class='info-list'>
+        <text>操作系统版本</text>
+        <text>{{systemInfo.system}}</text>
+      </view>
+      <view class='info-list'>
+        <text>客户端平台</text>
+        <text>{{systemInfo.platform}}</text>
+      </view>
+      <view class='info-list'>
+        <text>微信设置的语言</text>
+        <text>{{systemInfo.language}}</text>
+      </view>
+      <view class='info-list'>
+        <text>微信版本号</text>
+        <text>{{systemInfo.version}}</text>
+      </view>
+    </view>
+  </view>
+</view>

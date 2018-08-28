@@ -1,0 +1,38 @@
+<!--components/soundRecord/soundRecord.wxml-->
+<view class='container'>
+  <view class='record'>
+    <view class='time'>
+      <text>{{time}}</text>
+    </view>
+    <view class='icon'>
+      <image src='{{isRecordIng ? "./soundRecording.png" : "./soundRecord.png" }}'/>
+    </view>
+    <view class='opr'>
+      <button bindtap='soundRecord' data-type='0'>开始</button>
+      <button bindtap='soundRecord' data-type='1'>暂停</button>
+      <button bindtap='soundRecord' data-type='2'>继续</button>
+      <button bindtap='soundRecord' data-type='3'>停止</button>
+    </view>
+  </view>
+  
+  <view class='list-voice'>
+    <view class='title'>
+      <text>录音文件</text>
+    </view>
+    <view class='lists' catchtap='play' data-fileurl='{{items.tempFilePath}}' wx:for="{{list}}" wx:key="index"  wx:for-item="items">
+      <text>文件{{index + 1}}</text>
+    </view>
+  </view>
+
+  <!-- <view class='fade'>
+    <view class='content'>
+      <view class='title'>
+        <text>正在播放</text>
+      </view>
+      <view class='title'>
+        <text>{{voice.filePath}}</text>
+      </view>
+    </view>
+  </view> -->
+
+</view>

@@ -55,4 +55,23 @@ var showModel = (title, content, showCancel, callback) => {
   })
 }
 
-module.exports = { formatTime, showBusy, showSuccess, showFail, showModel }
+var showCustomBox = (title, content, cancelText, confirmText, callback) => {
+  callback = callback || function () { }
+  wx.hideToast();
+  wx.showModal({
+    title,
+    content: content,
+    showCancel: true,
+    cancelText: cancelText,
+    confirmText: confirmText,
+    success: function (res) {
+      if (res.confirm) {
+        callback(res)
+      } else if (res.cancel) {
+        callback(res)
+      }
+    }
+  })
+}
+
+module.exports = { formatTime, showBusy, showSuccess, showFail, showModel, showCustomBox }

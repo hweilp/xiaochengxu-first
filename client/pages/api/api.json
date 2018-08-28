@@ -1,5 +1,8 @@
 {
   "component": true,
-  "usingComponents": {},
+  "usingComponents": {
+    "link": "/components/link/link",
+    "soundRecord": "/components/soundRecord/soundRecord"
+  },
   "navigationBarTitleText": "API"
 }
