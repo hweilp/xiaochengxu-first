@@ -4,5 +4,6 @@
     "link": "/components/link/link",
     "soundRecord": "/components/soundRecord/soundRecord"
   },
+  "enablePullDownRefresh": true,
   "navigationBarTitleText": "API"
 }

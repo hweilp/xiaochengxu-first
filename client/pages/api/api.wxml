@@ -18,4 +18,14 @@
     href="/pages/api/apilist/list?id=1">
     </link>
   </view>
+  <view class='list_group'>
+   <button catchtap='refresh'>刷新</button>
+  </view>
+  <view class='list_group'>
+   <view><text>动画</text></view>
+   <view>
+    <button bindtap='beignS'>开始</button>
+   </view>
+   <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+  </view>
 </view>
